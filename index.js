@@ -54,7 +54,7 @@ async function run() {
             }
 
             try {
-                const returnedValue = releaseJson.variables[variableName];
+                const returnedValue = releaseJson.variables[variableName]? releaseJson.variables[variableName].value : undefined;
                 if (returnedValue !== undefined) {
                     console.log(`Returned value of ${variableName} = ${returnedValue}`);
                     clearInterval(interval);
