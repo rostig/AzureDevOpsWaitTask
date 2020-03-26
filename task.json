@@ -12,7 +12,7 @@
 		"Minor": 0,
 		"Patch": 0
 	},
-	"instanceNameFormat": "Wait until $(variableName) is created",
+	"instanceNameFormat": "Wait until \"$(variableName)\" variable is created",
 	"inputs": [
 		{
 			"name": "variableName",
