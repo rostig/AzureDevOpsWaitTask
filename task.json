@@ -1,0 +1,55 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+	"id": "21813e5c-b556-41bc-be0c-b306b1ba9329",
+	"name": "WaitCommand",
+	"friendlyName": "Wait Command",
+	"description": "This task waits until specified variable is created in currently running release or until defined timeout expired. Requires - Allow scripts to access the OAuth token. Works cross platform.",
+	"helpMarkDown": "",
+	"category": "Utility",
+	"author": "Rostislav Gerasimov",
+	"version": {
+		"Major": 1,
+		"Minor": 0,
+		"Patch": 0
+	},
+	"instanceNameFormat": "Wait until $(variableName) is created",
+	"inputs": [
+		{
+			"name": "variableName",
+			"type": "string",
+			"label": "Variable name",
+			"helpMarkDown": "Enter name of variable",
+			"required": true,
+			"defaultValue" : ""
+		},
+		{
+			"name": "succeedValue",
+			"type": "string",
+			"label": "Succeed value",
+			"helpMarkDown": "Enter value of succeed status.",
+			"required": true,
+			"defaultValue" : ""
+		},
+		{
+			"name": "failedValue",
+			"type": "string",
+			"label": "Failed value",
+			"helpMarkDown": "Enter value of failed status. The task will throw exception if failed status returned.",
+			"required": false,
+			"defaultValue" : ""
+		},
+		{
+			"name": "Timeout",
+			"type": "int",
+			"label": "Timeout",
+			"helpMarkDown": "Specifies the maximum time in minutes, that a task is allowed to execute before being canceled by server. A zero value indicates an infinite timeout.",
+			"required": true,
+			"defaultValue" : 0
+		}
+	],
+	"execution": {
+		"Node10": {
+			"target": "index.js"
+		}
+	}
+}
