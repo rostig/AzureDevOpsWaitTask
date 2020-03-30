@@ -10,7 +10,7 @@
 	"version": {
 		"Major": 1,
 		"Minor": 0,
-		"Patch": 2
+		"Patch": 3
 	},
 	"instanceNameFormat": "Wait until \"$(variableName)\" variable is created",
 	"inputs": [
@@ -37,14 +37,6 @@
 			"helpMarkDown": "Enter value of failed status. The task will throw exception if failed status returned.",
 			"required": false,
 			"defaultValue" : ""
-		},
-		{
-			"name": "Timeout",
-			"type": "int",
-			"label": "Timeout",
-			"helpMarkDown": "Specifies the maximum time in minutes, that a task is allowed to execute before being canceled by server. A zero value indicates an infinite timeout.",
-			"required": true,
-			"defaultValue" : 0
 		}
 	],
 	"execution": {
