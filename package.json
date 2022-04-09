@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "azure-pipelines-task-lib": "^2.9.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.8"
   },
